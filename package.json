@@ -1,0 +1,43 @@
+{
+  "name": "agent-bridge-cli",
+  "version": "1.0.0",
+  "description": "Unified CLI bridge for Claude Code, Hermes Agent, and OpenAI Codex",
+  "type": "module",
+  "bin": {
+    "agentbridge": "./bin/agentbridge.js",
+    "ab": "./bin/agentbridge.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "bin",
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "agentbridge": "node ./bin/agentbridge.js",
+    "smoke": "bash ./scripts/smoke-test.sh",
+    "status": "node ./bin/agentbridge.js status"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "claude-code",
+    "hermes",
+    "codex",
+    "cli",
+    "agentbridge"
+  ],
+  "author": "Alejandro Canciobello",
+  "license": "MIT",
+  "dependencies": {
+    "toml": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.0"
+  }
+}
